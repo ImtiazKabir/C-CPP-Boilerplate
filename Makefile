@@ -37,29 +37,29 @@ export CPPSTANDARD:=-std=c++17
 
 # flags
 _FLAGS   :=-c -Wall -Wextra -pedantic -Wparentheses -Wformat=2 \
-                 -Wshadow -Wwrite-strings -Wredundant-decls -Wmissing-include-dirs \
-					       -pedantic-errors -Wuninitialized -Wmissing-declarations -Wconversion \
-					       -Wdouble-promotion -Wfloat-equal
+           -Wshadow -Wwrite-strings -Wredundant-decls -Wmissing-include-dirs \
+					 -pedantic-errors -Wuninitialized -Wmissing-declarations -Wconversion \
+					 -Wdouble-promotion -Wfloat-equal
 _CFLAGS  :=$(CSTANDARD) -Wstrict-prototypes -Wnested-externs -Wold-style-definition \
-                 -Wbad-function-cast -Wno-unknown-pragmas -Wno-unused-function
+          -Wbad-function-cast -Wno-unknown-pragmas -Wno-unused-function
 # GCC warnings that Clang doesn't provide:
 ifeq ($(CC),gcc)
 	_CFLAGS+=-Wjump-misses-init -Wlogical-op
 endif
 
 _CPPFLAGS:=$(CPPSTANDARD) -Wimport -fcheck-new -Wlogical-op \
-                -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self \
-					      -Wnoexcept -Wold-style-cast -Woverloaded-virtual \
-					      -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel \
-					      -Wstrict-overflow=5 -Wswitch-default -Wundef -Wwrite-strings \
-					      -Waggregate-return -Weffc++ -Winline -Winvalid-pch \
-					      -Wnormalized=nfc -Wpadded -Wstack-protector -Wpointer-arith \
-					      -Wswitch-enum -Wunsafe-loop-optimizations -Wuseless-cast \
-					      -Wzero-as-null-pointer-constant -Wformat-nonliteral \
-					      -Wformat-security -Wformat-y2k -Wcast-align -Wcast-qual -Winit-self \
-					      -Wlong-long -Wmissing-field-initializers -Wmissing-format-attribute \
-					      -Wmissing-noreturn -Wpacked -Wunreachable-code -Wunused \
-					      -Wunused-parameter -Wvariadic-macros -fno-gnu-keywords
+           -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self \
+					 -Wnoexcept -Wold-style-cast -Woverloaded-virtual \
+					 -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel \
+					 -Wstrict-overflow=5 -Wswitch-default -Wundef -Wwrite-strings \
+					 -Waggregate-return -Weffc++ -Winline -Winvalid-pch \
+					 -Wnormalized=nfc -Wpadded -Wstack-protector -Wpointer-arith \
+					 -Wswitch-enum -Wunsafe-loop-optimizations -Wuseless-cast \
+					 -Wzero-as-null-pointer-constant -Wformat-nonliteral \
+					 -Wformat-security -Wformat-y2k -Wcast-align -Wcast-qual -Winit-self \
+					 -Wlong-long -Wmissing-field-initializers -Wmissing-format-attribute \
+					 -Wmissing-noreturn -Wpacked -Wunreachable-code -Wunused \
+					 -Wunused-parameter -Wvariadic-macros -fno-gnu-keywords
 
 export DEBUG_OPTIMIZATION    :=-g3 -fno-defer-pop -fno-inline -fno-function-cse \
                                -fno-zero-initialized-in-bss -fno-guess-branch-probability
