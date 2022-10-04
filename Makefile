@@ -39,7 +39,7 @@ export CPPSTANDARD:=-std=c++17
 _FLAGS   :=-c -Wall -Wextra -pedantic -Wparentheses -Wformat=2 \
            -Wshadow -Wwrite-strings -Wredundant-decls -Wmissing-include-dirs \
 					 -pedantic-errors -Wuninitialized -Wmissing-declarations -Wconversion \
-					 -Wdouble-promotion -Wfloat-equal
+					 -Wdouble-promotion -Wfloat-equal -Wmain -Wundef
 _CFLAGS  :=$(CSTANDARD) -Wstrict-prototypes -Wnested-externs -Wold-style-definition \
           -Wbad-function-cast -Wno-unknown-pragmas -Wno-unused-function
 # GCC warnings that Clang doesn't provide:
@@ -51,7 +51,7 @@ _CPPFLAGS:=$(CPPSTANDARD) -Wimport -fcheck-new -Wlogical-op \
            -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self \
 					 -Wnoexcept -Wold-style-cast -Woverloaded-virtual \
 					 -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel \
-					 -Wstrict-overflow=5 -Wswitch-default -Wundef -Wwrite-strings \
+					 -Wstrict-overflow=5 -Wswitch-default -Wwrite-strings \
 					 -Waggregate-return -Weffc++ -Winline -Winvalid-pch \
 					 -Wnormalized=nfc -Wpadded -Wstack-protector -Wpointer-arith \
 					 -Wswitch-enum -Wunsafe-loop-optimizations -Wuseless-cast \
@@ -59,7 +59,8 @@ _CPPFLAGS:=$(CPPSTANDARD) -Wimport -fcheck-new -Wlogical-op \
 					 -Wformat-security -Wformat-y2k -Wcast-align -Wcast-qual -Winit-self \
 					 -Wlong-long -Wmissing-field-initializers -Wmissing-format-attribute \
 					 -Wmissing-noreturn -Wpacked -Wunreachable-code -Wunused \
-					 -Wunused-parameter -Wvariadic-macros -fno-gnu-keywords
+					 -Wunused-parameter -Wvariadic-macros -fno-gnu-keywords \
+					 -Wnon-virtual-dtor
 
 export DEBUG_OPTIMIZATION    :=-g3 -fno-defer-pop -fno-inline -fno-function-cse \
                                -fno-zero-initialized-in-bss -fno-guess-branch-probability
