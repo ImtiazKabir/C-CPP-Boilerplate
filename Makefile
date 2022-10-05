@@ -79,8 +79,8 @@ _DEFINES   :=
 export CDEFINES  :=
 export CPPDEFINES:=
 
-export DEBUG_DEFINE  :=-D_DEBUG
-export RELEASE_DEFINE:=-D_RELEASE
+export DEBUG_DEFINE  :=-DDEBUG
+export RELEASE_DEFINE:=-DRELEASE
 
 export rwildcard=$(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
 export SRCS_c    :=$(call rwildcard,$(SRCDIR),*.c)

@@ -6,8 +6,8 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "_DEBUG"
-                // "_RELEASE"
+                "DEBUG"
+                // "RELEASE"
             ],
             "compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "cStandard": "c89",
